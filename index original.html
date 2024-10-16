@@ -8,7 +8,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
         />
         <link rel="icon" type="image/png" href="/assets/logo negro.png" />
-        <link rel="stylesheet" href="/style.css" />
+        <link rel="stylesheet" href="style.css" />
         <title>Mariano Hilario - Personal Portfolio</title>
     </head>
     <body>
@@ -28,65 +28,33 @@
                 </div>
                 <ul class="navbar__menu">
                     <li>
-                        <a
-                            data-section="navbar"
-                            data-value="home"
-                            href="#"
-                            class="navbar__link"
-                            >Inicio</a
-                        >
+                        <a href="#" class="navbar__link">Home</a>
                     </li>
                     <li>
-                        <a
-                            data-section="navbar"
-                            data-value="about"
-                            href="#about"
-                            class="navbar__link"
-                            >Sobre mi</a
-                        >
+                        <a href="#about" class="navbar__link">About</a>
                     </li>
                     <li>
-                        <a
-                            data-section="navbar"
-                            data-value="skills"
-                            href="#skills"
-                            class="navbar__link"
-                            >Habilidades</a
-                        >
+                        <a href="#skills" class="navbar__link">Skills</a>
                     </li>
                     <li>
-                        <a
-                            data-section="navbar"
-                            data-value="projects"
-                            href="#projects"
-                            class="navbar__link"
-                            >Proyectos</a
-                        >
+                        <a href="#projects" class="navbar__link">Projects</a>
                     </li>
                     <li>
-                        <a
-                            data-section="navbar"
-                            data-value="contact"
-                            href="#contact"
-                            class="navbar__link"
-                            >Contacto</a
-                        >
+                        <a href="#contact" class="navbar__link">Contact</a>
                     </li>
                 </ul>
                 <div class="navbar__actions">
                     <div class="language">
-                        <button class="langBtn navbar__link" data-language="en">
-                            <img src="/assets/EN-Flag.png" alt="UK Flag" />
-                        </button>
-                        <button class="langBtn navbar__link" data-language="es">
-                            <img src="/assets/ES-Flag.png" alt="Spain Flag" />
-                        </button>
+                        <label for="">
+                            <input type="checkbox" class="language__checkbox" />
+                            <span>ES</span>
+                            <span>EN</span>
+                        </label>
                     </div>
                     <a
-                        href="/assets/resumes/MarianoHilarioResume - ES.pdf"
-                        download="MarianoHilarioResume - ES.pdf"
+                        href="assets/resumes/MarianoHilarioResume - EN.pdf"
+                        download="MarianoHilarioResume - EN.pdf"
                         class="btn"
-                        id="resumeBtn"
                     >
                         <i class="ri-download-2-line"></i> Get CV
                     </a>
@@ -97,38 +65,26 @@
 
         <section class="hero" id="home">
             <div class="hero__content">
-                <img src="/assets/profile.png" alt="" class="hero__image" />
-                <h2 data-section="hero" data-value="title">
-                    Hola, soy Mariano Hilario
-                </h2>
+                <img src="assets/profile.png" alt="" class="hero__image" />
+                <h2>Hello, I'm Mariano Hilario</h2>
             </div>
 
             <div class="hero__intro">
-                <h3 data-section="hero" data-value="subtitle">
-                    Desarrollador fullstack y líder operativo con base en Buenos
-                    Aires, Argentina.
+                <h3>
+                    Fullstack Developer & Operational Leader based in Buenos
+                    Aires, Argentina
                 </h3>
-                <p data-section="hero" data-value="text">
-                    Desarrollador web fullstack con más de 20 años de
-                    experiencia en liderazgo operativo. Apasionado por combinar
-                    conocimientos técnicos y organizacionales para diseñar
-                    soluciones innovadoras y eficientes. Siempre en búsqueda de
-                    nuevos desafíos que me permitan crecer y agregar valor.
+                <p>
+                    Fullstack web developer with over 20 years of experience in
+                    operational leadership. Passionate about combining technical
+                    and organizational knowledge to design innovative and
+                    efficient solutions. Always looking for new challenges that
+                    allow me to grow and add value.
                 </p>
                 <div class="hero__actions">
-                    <a
-                        href="#contact"
-                        class="btn"
-                        data-section="hero"
-                        data-value="work-with-me"
-                        >Trabaja conmigo</a
-                    >
-                    <a
-                        href="#projects"
-                        class="btn btn--secondary"
-                        data-section="hero"
-                        data-value="see-portfolio"
-                        >Ver Portfolio</a
+                    <a href="#contact" class="btn">Work With Me</a>
+                    <a href="#projects" class="btn btn--secondary"
+                        >See My Portfolio</a
                     >
                 </div>
             </div>
@@ -152,92 +108,59 @@
         </section>
 
         <section class="career_main" id="about">
-            <h3 data-section="about" data-value="subtitle">
-                Resumen de carrera
-            </h3>
-            <p data-section="about" data-value="text">
-                Durante más de 20 años coordiné equipos multidisciplinarios y
-                optimicé procesos en grandes organizaciones. Esta experiencia me
-                brindó una base sólida en resolución de problemas y toma de
-                decisiones rápidas, habilidades que ahora aplico al desarrollo
-                de software para ofrecer soluciones funcionales y escalables.
+            <h3>Career Summary</h3>
+            <p>
+                For over 20 years I coordinated multidisciplinary teams and
+                optimized processes in large organizations. This experience
+                provided me with a solid foundation in problem solving and quick
+                decision making, skills that I now apply to software development
+                to deliver functional and scalable solutions.
             </p>
             <div class="career">
                 <div class="career__jobs">
-                    <h3 data-section="about" data-value="work-experience">
-                        Experiencia laboral
-                    </h3>
+                    <h3>Work Experience</h3>
                     <div class="job">
                         <i class="ri-pen-nib-fill"></i>
                         <div class="job__info">
-                            <h5
-                                data-section="about"
-                                data-value="first-job-title"
-                            >
-                                Desarrollador Full Stack en
-                                <span>Freelance</span>
+                            <h5>
+                                Full Stack Developer at <span>Freelance</span>
                             </h5>
-                            <p data-section="about" data-value="first-job-date">
-                                Agosto 2022 - Presente
-                            </p>
+                            <p>August 2022 - Present</p>
                         </div>
                     </div>
                     <div class="job">
                         <i class="ri-pen-nib-fill"></i>
                         <div class="job__info">
-                            <h5
-                                data-section="about"
-                                data-value="second-job-title"
-                            >
-                                Jefe de Operaciones en
+                            <h5>
+                                Operations Manager at
                                 <span>Correo Argentino</span>
                             </h5>
-                            <p
-                                data-section="about"
-                                data-value="second-job-date"
-                            >
-                                Marzo 2020 - Mayo 2024
-                            </p>
+                            <p>March 2020 - May 2024</p>
                         </div>
                     </div>
                     <div class="job">
                         <i class="ri-pen-nib-fill"></i>
                         <div class="job__info">
-                            <h5
-                                data-section="about"
-                                data-value="third-job-title"
-                            >
-                                Jefe de Control de Gestión y Procesos en
+                            <h5>
+                                Head of Processes and Management Control at
+                                <span>Correo Argentino</span>
                             </h5>
-                            <span>Correo Argentino</span>
-                            <p data-section="about" data-value="third-job-date">
-                                Julio 2005 - Marzo 2020
-                            </p>
+                            <p>July 2005 - March 2020</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="career__awards">
-                    <h3 data-section="about" data-value="certifications">
-                        Certificaciones
-                    </h3>
+                    <h3>Certifications</h3>
                     <div class="award">
                         <div>
                             <i class="ri-medal-fill"></i>
                             <div class="award__info">
-                                <h5
-                                    data-section="about"
-                                    data-value="first-certification-title"
-                                >
-                                    Desarrollador Full Stack en
+                                <h5>
+                                    Full Stack Developer at
                                     <span>CODERHOUSE</span>
                                 </h5>
-                                <p
-                                    data-section="about"
-                                    data-value="first-certification-date"
-                                >
-                                    Junio 2023
-                                </p>
+                                <p>June 2023</p>
                             </div>
                         </div>
                         <a
@@ -250,19 +173,11 @@
                         <div>
                             <i class="ri-medal-fill"></i>
                             <div class="award__info">
-                                <h5
-                                    data-section="about"
-                                    data-value="second-certification-title"
-                                >
-                                    Python en
+                                <h5>
+                                    Python at
                                     <span>CODERHOUSE</span>
                                 </h5>
-                                <p
-                                    data-section="about"
-                                    data-value="second-certification-date"
-                                >
-                                    Diciembre 2022
-                                </p>
+                                <p>December 2022</p>
                             </div>
                         </div>
                         <a
@@ -275,19 +190,11 @@
                         <div>
                             <i class="ri-medal-fill"></i>
                             <div class="award__info">
-                                <h5
-                                    data-section="about"
-                                    data-value="third-certification-title"
-                                >
-                                    Wordpress en
+                                <h5>
+                                    Wordpress at
                                     <span>CODERHOUSE</span>
                                 </h5>
-                                <p
-                                    data-section="about"
-                                    data-value="third-certification-date"
-                                >
-                                    Abril 2024
-                                </p>
+                                <p>April 2024</p>
                             </div>
                         </div>
                         <a
@@ -302,129 +209,124 @@
 
         <section class="skills" id="skills">
             <div class="skills__desc">
-                <h3 data-section="skills" data-value="subtitle">
-                    Experiencia en múltiples proyectos y tecnologías
-                </h3>
-                <div data-section="skills" data-value="text">
-                    <p>
-                        <b>Desarrollo Frontend</b> Tengo experiencia en la
-                        creación de interfaces de usuario modernas e
-                        interactivas, utilizando tecnologías y herramientas
-                        actuales que me permiten construir aplicaciones web
-                        rápidas, eficientes y responsivas.
-                    </p>
-                    <p>
-                        <b>Desarrollo de backend</b> Me especializo en el
-                        desarrollo de servidores robustos y eficientes,
-                        asegurando que la lógica empresarial y la manipulación
-                        de datos funcionen sin problemas.
-                    </p>
-                    <p>
-                        <b>Pruebas y calidad</b> Me esfuerzo por entregar código
-                        de alta calidad, utilizando las mejores prácticas de
-                        prueba para garantizar que el software funcione como se
-                        espera en todo momento.
-                    </p>
-                    <p>
-                        <b>DevOps</b> Utilizo Git, GitHub y Docker para mantener
-                        un flujo de trabajo eficiente y una alta productividad
-                        en el desarrollo de software.
-                    </p>
-                    <p>
-                        <b>Soft Skills</b> Además de mis habilidades técnicas,
-                        cuento con más de 20 años de experiencia en liderazgo
-                        operativo, lo que me permite tener una visión global y
-                        estratégica en la toma de decisiones, así como en la
-                        coordinación de proyectos y equipos.
-                    </p>
-                </div>
+                <h3>Experienced Across Multiple Projects and Technologies</h3>
+                <p>
+                    <b>Frontend Development</b> I have experience creating
+                    modern, interactive user interfaces, using current
+                    technologies and tools that allow me to build fast,
+                    efficient, and responsive web applications.
+                </p>
+                <p>
+                    <b>Backend Development</b> I specialize in developing robust
+                    and efficient servers, ensuring that business logic and data
+                    manipulation work smoothly.
+                </p>
+                <p>
+                    <b>Testing & Quality</b> I strive to deliver high-quality
+                    code, using testing best practices to ensure that the
+                    software works as expected at all times.
+                </p>
+                <p>
+                    <b>DevOps</b> I leverage Git, GitHub y Docker to maintain an
+                    efficient workflow and high productivity in software
+                    development.
+                </p>
+                <p>
+                    <b>Soft Skills</b> In addition to my technical skills, I
+                    have over 20 years of experience in operational leadership,
+                    which allows me to have a global and strategic vision in
+                    decision-making, as well as in the coordination of projects
+                    and teams.
+                </p>
 
                 <div class="skills__actions">
+                    <a href="#contact" class="btn">Work With Me</a>
                     <a
-                        href="#contact"
-                        class="btn"
-                        data-section="hero"
-                        data-value="work-with-me"
-                        >Trabaja conmigo</a
+                        href="mailto:marianohilario@gmail.com"
+                        class="btn btn--secondary"
+                        >Send Email</a
                     >
+                    <a href="https://wa.me/5491151339874" class="btn whatsapp"
+                        >Send WhatsApp <i class="ri-whatsapp-line"></i
+                    ></a>
                 </div>
             </div>
 
             <div class="skills__details">
                 <div class="skills__svg_container">
-                    <img src="/assets/skills/html5.svg" alt="HTML logo" />
+                    <img src="assets/skills/html5.svg" alt="HTML logo" />
                     <div class="tooltip">HTML</div>
                 </div>
                 <div class="skills__svg_container">
-                    <img src="/assets/skills/css.svg" alt="CSS logo" />
+                    <img src="assets/skills/css.svg" alt="CSS logo" />
                     <div class="tooltip">CSS</div>
                 </div>
                 <div class="skills__svg_container">
                     <img
-                        src="/assets/skills/javascript.svg"
+                        src="assets/skills/javascript.svg"
                         alt="JavaScript logo"
                     />
                     <div class="tooltip">JavaScript</div>
                 </div>
                 <div class="skills__svg_container">
                     <img
-                        src="/assets/skills/typescript.svg"
+                        src="assets/skills/typescript.svg"
                         alt="TypeScript logo"
                     />
                     <div class="tooltip">TypeScript</div>
                 </div>
                 <div class="skills__svg_container">
-                    <img src="/assets/skills/react.svg" alt="React logo" />
+                    <img src="assets/skills/react.svg" alt="React logo" />
                     <div class="tooltip">React</div>
                 </div>
                 <div class="skills__svg_container">
-                    <img src="/assets/skills/nodejs.svg" alt="NodeJS logo" />
+                    <img src="assets/skills/nodejs.svg" alt="NodeJS logo" />
                     <div class="tooltip">NodeJS</div>
                 </div>
                 <div class="skills__svg_container">
                     <img
-                        src="/assets/skills/Express.js_light.svg"
+                        src="assets/skills/Express.js_light.svg"
                         alt="Express logo"
                     />
                     <div class="tooltip">Express</div>
                 </div>
                 <div class="skills__svg_container">
-                    <img src="/assets/skills/nestjs.svg" alt="NestJS logo" />
+                    <img src="assets/skills/nestjs.svg" alt="NestJS logo" />
                     <div class="tooltip">NestJS</div>
                 </div>
                 <div class="skills__svg_container">
-                    <img src="/assets/skills/python-5.svg" alt="Python logo" />
+                    <img src="assets/skills/python-5.svg" alt="Python logo" />
                     <div class="tooltip">Python</div>
                 </div>
                 <div class="skills__svg_container">
-                    <img src="/assets/skills/fastapi.svg" alt="FastAPI logo" />
+                    <img src="assets/skills/fastapi.svg" alt="FastAPI logo" />
                     <div class="tooltip">FastAPI</div>
                 </div>
                 <div class="skills__svg_container">
-                    <img src="/assets/skills/typeorm.svg" alt="TypeORM logo" />
+                    <img src="assets/skills/typeorm.svg" alt="TypeORM logo" />
                     <div class="tooltip">TypeORM</div>
                 </div>
                 <div class="skills__svg_container">
                     <img
-                        src="/assets/skills/mongodb-wordmark.svg"
+                        src="assets/skills/mongodb-wordmark.svg"
                         alt="MongoDB logo"
                     />
                     <div class="tooltip">MongoDB</div>
                 </div>
                 <div class="skills__svg_container">
                     <img
-                        src="/assets/skills/postgresql.svg"
+                        src="assets/skills/postgresql.svg"
                         alt="PostgreSQL logo"
                     />
                     <div class="tooltip">PostgreSQL</div>
                 </div>
                 <div class="skills__svg_container">
-                    <img src="/assets/skills/jest.svg" alt="Jest logo" />
+                    <img src="assets/skills/jest.svg" alt="Jest logo" />
                     <div class="tooltip">Jest</div>
                 </div>
                 <div class="skills__svg_container">
                     <img
-                        src="/assets/skills/wordpress.svg"
+                        src="assets/skills/wordpress.svg"
                         alt="Wordpress logo"
                     />
                     <div class="tooltip">MongoDB</div>
@@ -434,7 +336,7 @@
 
         <section class="showcase" id="projects">
             <div class="showcase__header">
-                <h3 data-section="projects" data-value="title">Proyectos</h3>
+                <h3>Projects</h3>
             </div>
 
             <div class="showcase_categories">
@@ -448,20 +350,11 @@
                                 class="project-card__image"
                             />
                             <div class="project-card__info">
-                                <h5
-                                    data-section="projects"
-                                    data-value="project1-title"
-                                >
-                                    Ana Adelina
-                                </h5>
+                                <h5>Ana Adelina</h5>
                             </div>
-                            <p
-                                class="project-card__desc"
-                                data-section="projects"
-                                data-value="project1-desc"
-                            >
-                                Aplicación para la auto-gestión de turnos en
-                                salón de belleza.
+                            <p class="project-card__desc">
+                                Application for self-management of appointments
+                                in beauty salons.
                             </p>
 
                             <div class="technologies">
@@ -509,8 +402,6 @@
                                 href="https://turnero-ana-adelina.vercel.app/"
                                 class="btn"
                                 target="_blank"
-                                data-section="projects"
-                                data-value="view-demo"
                                 >View Live Demo</a
                             >
                         </div>
@@ -521,20 +412,11 @@
                                 class="project-card__image"
                             />
                             <div class="project-card__info">
-                                <h5
-                                    data-section="projects"
-                                    data-value="project2-title"
-                                >
-                                    MH Movies
-                                </h5>
+                                <h5>MH Movies</h5>
                             </div>
-                            <p
-                                class="project-card__desc"
-                                data-section="projects"
-                                data-value="project2-desc"
-                            >
-                                Proyecto realizado para la presentación de
-                                películas y visualización de sus trailers.
+                            <p class="project-card__desc">
+                                Project carried out for the presentation of
+                                films and viewing of their trailers.
                             </p>
 
                             <div class="technologies">
@@ -576,8 +458,6 @@
                                 href="https://movies-platform-lemon.vercel.app/"
                                 class="btn"
                                 target="_blank"
-                                data-section="projects"
-                                data-value="view-demo"
                                 >View Live Demo</a
                             >
                         </div>
@@ -588,20 +468,11 @@
                                 class="project-card__image"
                             />
                             <div class="project-card__info">
-                                <h5
-                                    data-section="projects"
-                                    data-value="project3-title"
-                                >
-                                    Pork Custom Toys
-                                </h5>
+                                <h5>Pork Custom Toys</h5>
                             </div>
-                            <p
-                                class="project-card__desc"
-                                data-section="projects"
-                                data-value="project3-desc"
-                            >
-                                Poryecto desarrollado para la promosión y venta
-                                de juguetes personalizados.
+                            <p class="project-card__desc">
+                                Project developed for the promotion and sale of
+                                personalized toys.
                             </p>
 
                             <div class="technologies">
@@ -633,8 +504,6 @@
                                 href="https://pork-custom-toys.vercel.app/"
                                 class="btn"
                                 target="_blank"
-                                data-section="projects"
-                                data-value="view-demo"
                                 >View Live Demo</a
                             >
                         </div>
@@ -645,21 +514,12 @@
                                 class="project-card__image"
                             />
                             <div class="project-card__info">
-                                <h5
-                                    data-section="projects"
-                                    data-value="project4-title"
-                                >
-                                    CAB Mariano
-                                </h5>
+                                <h5>CAB Mariano</h5>
                             </div>
-                            <p
-                                class="project-card__desc"
-                                data-section="projects"
-                                data-value="project4-desc"
-                            >
-                                Página del Club Atlético Banfield con
-                                información de las competencias, resultados,
-                                eventos, historia, noticias y tienda.
+                            <p class="project-card__desc">
+                                Club Atlético Banfield website with information
+                                on competitions, results, events, history, news
+                                and store.
                             </p>
 
                             <div class="technologies">
@@ -684,8 +544,6 @@
                                 href="https://dev-cabmariano.pantheonsite.io/"
                                 class="btn"
                                 target="_blank"
-                                data-section="projects"
-                                data-value="view-demo"
                                 >View Live Demo</a
                             >
                         </div>
@@ -698,21 +556,12 @@
                                 class="project-card__image"
                             />
                             <div class="project-card__info">
-                                <h5
-                                    data-section="projects"
-                                    data-value="project5-title"
-                                >
-                                    API Ecommerce
-                                </h5>
+                                <h5>API Ecommerce</h5>
                             </div>
-                            <p
-                                class="project-card__desc"
-                                data-section="projects"
-                                data-value="project5-desc"
-                            >
-                                Esta API de comercio electrónico le permite
-                                administrar usuarios, productos y órdenes de
-                                compra con funcionalidades CRUD completas.
+                            <p class="project-card__desc">
+                                This ecommerce API allows you to manage users,
+                                products and purchase orders with complete CRUD
+                                functionalities.
                             </p>
 
                             <div class="technologies">
@@ -749,8 +598,6 @@
                                 href="https://backend-nestjs-ecommerce-henry.onrender.com/api"
                                 class="btn"
                                 target="_blank"
-                                data-section="projects"
-                                data-value="view-demo"
                                 >View Live Demo</a
                             >
                         </div>
@@ -761,19 +608,10 @@
                                 class="project-card__image"
                             />
                             <div class="project-card__info">
-                                <h5
-                                    data-section="projects"
-                                    data-value="project6-title"
-                                >
-                                    QR Generator
-                                </h5>
+                                <h5>QR Generator</h5>
                             </div>
-                            <p
-                                class="project-card__desc"
-                                data-section="projects"
-                                data-value="project6-desc"
-                            >
-                                Generador de codigos QR.
+                            <p class="project-card__desc">
+                                QR codes generator.
                             </p>
 
                             <div class="technologies">
@@ -805,8 +643,6 @@
                                 href="https://qr-code-generator-drab-six.vercel.app/"
                                 class="btn"
                                 target="_blank"
-                                data-section="projects"
-                                data-value="view-demo"
                                 >View Live Demo</a
                             >
                         </div>
@@ -817,20 +653,9 @@
                                 class="project-card__image"
                             />
                             <div class="project-card__info">
-                                <h5
-                                    data-section="projects"
-                                    data-value="project7-title"
-                                >
-                                    Translator
-                                </h5>
+                                <h5>Translator</h5>
                             </div>
-                            <p
-                                class="project-card__desc"
-                                data-section="projects"
-                                data-value="project7-desc"
-                            >
-                                Traductor de texto.
-                            </p>
+                            <p class="project-card__desc">Text translator.</p>
 
                             <div class="technologies">
                                 <img
@@ -861,8 +686,6 @@
                                 href="https://translator-app-bay.vercel.app/"
                                 class="btn"
                                 target="_blank"
-                                data-section="projects"
-                                data-value="view-demo"
                                 >View Live Demo</a
                             >
                         </div>
@@ -873,20 +696,11 @@
                                 class="project-card__image"
                             />
                             <div class="project-card__info">
-                                <h5
-                                    data-section="projects"
-                                    data-value="project8-title"
-                                >
-                                    Drag and Drop Notes
-                                </h5>
+                                <h5>Drag and Drop Notes</h5>
                             </div>
-                            <p
-                                class="project-card__desc"
-                                data-section="projects"
-                                data-value="project8-desc"
-                            >
-                                Crea tus notas, arrastralas y sueltalas en el
-                                lugar de la pantalla que quieras.
+                            <p class="project-card__desc">
+                                Create your notes, drag and drop them to the
+                                desired location on the screen.
                             </p>
 
                             <div class="technologies">
@@ -918,8 +732,6 @@
                                 href="https://drag-and-drop-notes-henna.vercel.app/"
                                 class="btn"
                                 target="_blank"
-                                data-section="projects"
-                                data-value="view-demo"
                                 >View Live Demo</a
                             >
                         </div>
@@ -930,28 +742,22 @@
 
         <section class="contact" id="contact">
             <div class="contact__info">
-                <h5 data-section="contact" data-value="title">
-                    Tienes algún proyecto?
-                </h5>
-                <h2 data-section="contact" data-value="subtitle">
-                    Trabajemos juntos!
-                </h2>
+                <h5>Got a Projects?</h5>
+                <h2>Let's Work Together!</h2>
                 <a href="https://wa.me/5491151339874" class="btn whatsapp"
-                    >WhatsApp <i class="ri-whatsapp-line"></i
+                    >Send WhatsApp <i class="ri-whatsapp-line"></i
                 ></a>
-                <p data-section="contact" data-value="phone">
-                    Phone: <span>+54 9 11 5133 9874</span>
-                </p>
+                <p>Phone: <span>+54 9 11 5133 9874</span></p>
                 <a
                     href="mailto:marianohilario@gmail.com"
                     class="btn btn--secondary"
-                    >Email <i class="ri-mail-fill"></i
+                    >Send Email <i class="ri-mail-fill"></i
                 ></a>
                 <p>Email: <span>marianohilario@gmail.com</span></p>
             </div>
             <form id="contact-form" class="contact__form">
-                <label for="name" data-section="contact" data-value="name"
-                    >Nombre
+                <label for="name"
+                    >Name
                     <input
                         type="text"
                         id="name"
@@ -972,8 +778,8 @@
                     />
                 </label>
 
-                <label for="message" data-section="contact" data-value="message"
-                    >Mensaje
+                <label for="message"
+                    >Menssage
                     <textarea
                         id="message"
                         name="message"
@@ -982,14 +788,7 @@
                     ></textarea>
                 </label>
 
-                <button
-                    type="submit"
-                    class="btn"
-                    data-section="contact"
-                    data-value="submit"
-                >
-                    Enviar
-                </button>
+                <button type="submit" class="btn">Submit</button>
             </form>
         </section>
 
@@ -1003,22 +802,14 @@
             </div>
 
             <div class="footer__links">
-                <a data-section="navbar" data-value="home" href="#">Inicio</a>
-                <a data-section="navbar" data-value="about" href="#about"
-                    >Sobre mi</a
-                >
-                <a data-section="navbar" data-value="skills" href="#skills"
-                    >Habilidades</a
-                >
-                <a data-section="navbar" data-value="projects" href="#projects"
-                    >Proyectos</a
-                >
-                <a data-section="navbar" data-value="contact" href="#contact"
-                    >Contacto</a
-                >
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </div>
         </footer>
     </body>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script src="/index.js"></script>
+    <script src="index.js"></script>
 </html>

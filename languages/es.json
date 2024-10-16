@@ -1,0 +1,66 @@
+{
+    "navbar": {
+        "home": "Inicio",
+        "about": "Sobre mi",
+        "skills": "Habilidades",
+        "projects": "Proyectos",
+        "contact": "Contacto"
+    },
+    "hero": {
+        "title": "Hola, soy Mariano Hilario",
+        "subtitle": "Desarrollador fullstack y líder operativo con base en Buenos Aires, Argentina.",
+        "text": "Desarrollador web fullstack con más de 20 años de experiencia en liderazgo operativo. Apasionado por combinar conocimientos técnicos y organizacionales para diseñar soluciones innovadoras y eficientes. Siempre en búsqueda de nuevos desafíos que me permitan crecer y agregar valor.",
+        "work-with-me": "Trabaja conmigo",
+        "see-portfolio": "Ver Portfolio"
+    },
+    "about": {
+        "subtitle": "Resumen de carrera",
+        "text": "Durante más de 20 años coordiné equipos multidisciplinarios y optimicé procesos en grandes organizaciones. Esta experiencia me brindó una base sólida en resolución de problemas y toma de decisiones rápidas, habilidades que ahora aplico al desarrollo de software para ofrecer soluciones funcionales y escalables.",
+        "work-experience": "Experiencia laboral",
+        "first-job-title": "Desarrollador Full Stack en <span>Freelance</span>",
+        "first-job-date": "Agosto 2022 - Presente",
+        "second-job-title": "Jefe de Operaciones en <span>Correo Argentino</span>",
+        "second-job-date": "Marzo 2020 - Mayo 2024",
+        "third-job-title": "Jefe de Control de Gestión y Procesos en <span>Correo Argentino</span>",
+        "third-job-date": "Julio 2005 - Marzo 2020",
+        "certifications": "Certificaciones",
+        "first-certification-title": "Desarrollador Full Stack en <span>CODERHOUSE</span>",
+        "first-certification-date": "Junio 2023",
+        "second-certification-title": "Python en <span>CODERHOUSE</span>",
+        "second-certification-date": "Diciembre 2022",
+        "third-certification-title": "Wordpress en <span>CODERHOUSE</span>",
+        "third-certification-date": "Abril 2024"
+    },
+    "skills": {
+        "subtitle": "Experiencia en múltiples proyectos y tecnologías",
+        "text": "<p><b>Desarrollo Frontend</b> Tengo experiencia en la creación de interfaces de usuario modernas e interactivas, utilizando tecnologías y herramientas actuales que me permiten construir aplicaciones web rápidas, eficientes y responsivas.</p> <p><b>Desarrollo de backend</b> Me especializo en el desarrollo de servidores robustos y eficientes, asegurando que la lógica empresarial y la manipulación de datos funcionen sin problemas.</p> <p><b>Pruebas y calidad</b> Me esfuerzo por entregar código de alta calidad, utilizando las mejores prácticas de prueba para garantizar que el software funcione como se espera en todo momento.</p> <p><b>DevOps</b> Utilizo Git, GitHub y Docker para mantener un flujo de trabajo eficiente y una alta productividad en el desarrollo de software.</p> <p><b>Soft Skills</b> Además de mis habilidades técnicas, cuento con más de 20 años de experiencia en liderazgo operativo, lo que me permite tener una visión global y estratégica en la toma de decisiones, así como en la coordinación de proyectos y equipos.</p>"
+    },
+    "projects": {
+        "title": "Proyectos",
+        "project1-title": "Ana Adelina",
+        "project1-description": "Aplicación para la auto-gestión de turnos en salón de belleza.",
+        "project2-title": "MH Movies",
+        "project2-description": "Proyecto realizado para la presentación de películas y visualización de sus trailers.",
+        "project3-title": "Pork Custom Toys",
+        "project3-description": "Poryecto desarrollado para la promosión y venta de juguetes personalizados.",
+        "project4-title": "CAB Mariano",
+        "project4-description": "Página del Club Atlético Banfield con información de las competencias, resultados, eventos, historia, noticias y tienda.",
+        "project5-title": "API Ecommerce",
+        "project5-description": "Esta API de comercio electrónico le permite administrar usuarios, productos y órdenes de compra con funcionalidades CRUD completas.",
+        "project6-title": "QR Generator",
+        "project6-description": "Generador de codigos QR.",
+        "project7-title": "Translator",
+        "project7-description": "Traductor de texto.",
+        "project8-title": "Drag and Drop Notes",
+        "project8-description": "Crea tus notas, arrastralas y sueltalas en el lugar de la pantalla que quieras.",
+        "view-demo": "Ver Demo"
+    },
+    "contact": {
+        "title": "Tienes algún proyecto?",
+        "subtitle": "Trabajemos juntos!",
+        "phone": "Phone: <span>+54 9 11 5133 9874</span>",
+        "name": "Nombre <input type='text' id='name' name='name' required placeholder='ejemplo: John Doe' />",
+        "message": "Mensaje <textarea id='message' name='message' required placeholder='Escriba su mensaje...' ></textarea>",
+        "submit": "Enviar"
+    }
+}

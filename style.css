@@ -17,6 +17,7 @@
 body {
     background-color: #f3f4f6;
     color: var(--primary-color);
+    letter-spacing: 1px;
 }
 
 a {
@@ -89,6 +90,14 @@ img {
     font-size: 30px;
 }
 
+.navlist {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
 .navbar__menu li {
     list-style: none;
 }
@@ -124,6 +133,45 @@ img {
     width: 100%;
 }
 
+.language {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.langBtn {
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.langBtn.navbar__link::before {
+    opacity: 0;
+}
+
+.langBtn img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.language span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #b7b7b7;
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 0px;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+}
+
+.language span:nth-child(3) {
+    right: 7px;
+}
+
+.language span:nth-child(2) {
+    left: 7px;
+}
+
 .navbar__actions {
     display: flex;
     align-items: center;
@@ -146,7 +194,7 @@ img {
     color: #6b7280;
 }
 
-.navbar__actions button {
+.navbar__actions a {
     padding: 6px 10px;
     font-size: 12px;
     font-weight: 500;
@@ -159,7 +207,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 100px 60px;
+    padding: 0 60px 100px;
     margin-top: 170px;
     gap: 60px;
     height: calc(100vh - 75px);
@@ -256,7 +304,7 @@ img {
 .skills__desc h3 {
     font-size: 30px;
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .skills__desc p {
@@ -309,7 +357,6 @@ img {
 
 .showcase {
     padding: 100px 60px;
-    background-color: #e5e7eb;
 }
 
 .showcase__header {
@@ -332,9 +379,9 @@ img {
     border-color: var(--primary-color);
 }
 
-.showcase_categories .category:first-child {
+/* .showcase_categories .category:first-child {
     margin-bottom: 100px;
-}
+} */
 
 .category__header {
     display: flex;
@@ -390,11 +437,11 @@ img {
 
 .technologies {
     width: 100%;
-    /* padding-bottom: 30px; */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 5px;
 }
 .tech {
     height: 30px;
@@ -408,6 +455,18 @@ img {
     filter: grayscale(0);
 }
 
+.projectBtn {
+    position: absolute;
+    align-content: end;
+    height: 25px;
+    bottom: 6px;
+    left: 6px;
+}
+
+.projectBtn img {
+    height: 25px;
+}
+
 .project-card {
     position: relative;
     display: flex;
@@ -415,7 +474,7 @@ img {
     justify-content: space-between;
     width: 25%;
     height: 420px;
-    padding: 20px 20px 45px;
+    padding: 20px 20px 50px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -472,9 +531,10 @@ img {
 }
 
 .career_main {
-    padding: 100px 60px 80px;
+    padding: 100px 60px;
     display: flex;
     flex-direction: column;
+    background-color: #e5e7eb;
 }
 
 .career_main > p {
@@ -537,7 +597,7 @@ img {
     font-weight: 500;
 }
 
-.job__info h5 span,
+.job__info span,
 .award__info h5 span {
     font-weight: 600;
 }
@@ -557,12 +617,17 @@ img {
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 100px;
+    padding: 100px 0;
     gap: 100px;
 }
 
 .contact__info {
     align-content: center;
+}
+
+.contact__info .btn {
+    display: inline-block;
+    width: 180px;
 }
 
 .contact__form {
@@ -577,13 +642,13 @@ img {
     padding: 6px 20px;
 }
 
-.contact__info .btn {
+.btn.whatsapp {
     background-color: #1ec940;
     border-color: #1ec940;
     opacity: 0.8;
 }
 
-.contact__info .btn:hover {
+.btn.whatsapp:hover {
     opacity: 1;
     color: #fff;
 }
@@ -618,12 +683,13 @@ img {
     font-weight: 500;
     font-size: 14px;
     margin-top: 14px;
+    margin-bottom: 20px;
 }
 
 .contact p span {
     color: var(--primary-color);
     font-weight: 600;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .footer {
@@ -647,7 +713,8 @@ img {
 
 .footer__brand a {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 15px;
+    color: #fff;
 }
 
 .footer__brand p {
@@ -699,76 +766,18 @@ img {
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1080px) {
+    .navbar__location {
+        display: none;
+    }
     .navbar {
-        padding: 20px 30px;
-    }
-
-    .hero {
-        padding: 100px 30px 40px;
-    }
-
-    .hero__intro h3 {
-        font-size: 22px;
-        line-height: 34px;
-    }
-
-    .hero__intro p {
-        font-size: 13px;
-    }
-
-    .skills {
-        flex-direction: column;
-        padding: 60px 30px 80px;
-    }
-
-    .skills__desc,
-    .skills__details,
-    .category__title,
-    .category__desc,
-    .career__jobs,
-    .career__awards {
-        width: 100%;
-    }
-
-    .skills__desc {
-        padding-right: 0;
-    }
-
-    .showcase {
-        padding: 80px 30px 100px;
-    }
-
-    .category__header {
-        flex-direction: column;
-    }
-
-    .category__title {
-        margin-bottom: 20px;
-    }
-
-    .career {
-        padding: 60px 30px 80px;
-        flex-direction: column;
-        gap: 60px;
-    }
-
-    .footer {
         padding: 20px 30px;
     }
 }
 
-@media screen and (max-width: 768px) {
-    .navbar__actions {
-        display: none;
-    }
-
+@media screen and (max-width: 900px) {
     .navbar .burguer {
         display: block;
-    }
-
-    .navbar__menu {
-        display: none;
     }
 
     .navlist .closeBtn {
@@ -778,6 +787,7 @@ img {
     }
 
     .navlist {
+        width: 50%;
         display: flex;
         flex-direction: column;
         align-items: end;
@@ -828,10 +838,106 @@ img {
         opacity: 0;
     }
 
+    .navbar__actions {
+        padding: 50px 2rem;
+    }
+
+    .navbar__actions .btn {
+        font-size: 15px;
+    }
+
+    .language {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+
+    .hero {
+        padding: 100px 30px 40px;
+    }
+
+    .hero__intro h3 {
+        font-size: 22px;
+        line-height: 34px;
+    }
+
+    .hero__intro p {
+        font-size: 13px;
+    }
+
+    .career_main {
+        padding: 100px 30px;
+    }
+
+    .skills {
+        flex-direction: column;
+        padding: 100px 30px;
+    }
+
+    .skills__desc,
+    .skills__details,
+    .category__title,
+    .category__desc,
+    .career__jobs,
+    .career__awards {
+        width: 100%;
+    }
+
+    .skills__desc {
+        padding-right: 0;
+    }
+
+    .skills__actions {
+        justify-content: center;
+    }
+
+    .showcase {
+        padding: 100px 30px;
+        background-color: #e5e7eb;
+    }
+
+    .category__header {
+        flex-direction: column;
+    }
+
+    .category__title {
+        margin-bottom: 20px;
+    }
+
+    .career {
+        padding: 60px 30px 0;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .contact__info {
+        width: 60%;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #dcdcdc;
+    }
+
+    .contact__form {
+        width: 50%;
+    }
+
+    .footer {
+        padding: 20px 30px;
+        flex-direction: column-reverse;
+        gap: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .hero {
         flex-direction: column;
         height: auto;
-        padding: 40px 30px 0px;
+        padding: 40px 30px 100px;
         gap: 30px;
     }
 
@@ -874,9 +980,20 @@ img {
         font-size: 26px;
     }
 
-    .footer {
-        flex-direction: column-reverse;
-        gap: 16px;
+    .contact__info {
+        width: 80%;
+    }
+
+    .contact__form {
+        width: 70%;
+    }
+
+    .footer__brand a {
+        display: none;
+    }
+
+    .footer__links a {
+        font-size: 12px;
     }
 }
 
@@ -893,6 +1010,7 @@ img {
 
     .navlist {
         left: 0;
+        width: 100%;
     }
 
     .hero__image {
@@ -941,7 +1059,7 @@ img {
         font-size: 32px;
     }
 
-    .footer__brand a {
-        display: none;
+    .footer__links {
+        gap: 10px;
     }
 }

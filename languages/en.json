@@ -1,0 +1,66 @@
+{
+    "navbar": {
+        "home": "Home",
+        "about": "About Me",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "Hello, I am Mariano Hilario",
+        "subtitle": "Fullstack developer and operational leader based in Buenos Aires, Argentina.",
+        "text": "Web fullstack developer with over 20 years of experience in operational leadership. Passionate about combining technical and organizational knowledge to design innovative and efficient solutions. Always seeking new challenges that allow me to grow and add value.",
+        "work-with-me": "Work with Me",
+        "see-portfolio": "See Portfolio"
+    },
+    "about": {
+        "subtitle": "Career Summary",
+        "text": "For over 20 years, I have coordinated multidisciplinary teams and optimized processes in large organizations. This experience has provided me with a solid foundation in problem-solving and quick decision-making skills, which I now apply to software development to deliver functional and scalable solutions.",
+        "work-experience": "Work Experience",
+        "first-job-title": "Full Stack Developer at",
+        "first-job-date": "August 2022 - Present",
+        "second-job-title": "Head of Operations at",
+        "second-job-date": "March 2020 - May 2024",
+        "third-job-title": "Head of Management Control and Processes at",
+        "third-job-date": "July 2005 - March 2020",
+        "certifications": "Certifications",
+        "first-certification-title": "Full Stack Developer at <span>CODERHOUSE</span>",
+        "first-certification-date": "June 2023",
+        "second-certification-title": "Python at <span>CODERHOUSE</span>",
+        "second-certification-date": "December 2022",
+        "third-certification-title": "WordPress at <span>CODERHOUSE</span>",
+        "third-certification-date": "April 2024"
+    },
+    "skills": {
+        "subtitle": "Experience in multiple projects and technologies",
+        "text": "<p><b>Frontend Development</b> I have experience creating modern and interactive user interfaces using current technologies and tools that allow me to build fast, efficient, and responsive web applications.</p> <p><b>Backend Development</b> I specialize in developing robust and efficient servers, ensuring that business logic and data manipulation work seamlessly.</p> <p><b>Testing and Quality</b> I strive to deliver high-quality code, using best testing practices to ensure that the software works as expected at all times.</p> <p><b>DevOps</b> I use Git, GitHub, and Docker to maintain an efficient workflow and high productivity in software development.</p> <p><b>Soft Skills</b> In addition to my technical skills, I have over 20 years of experience in operational leadership, which allows me to have a global and strategic view in decision-making, as well as in coordinating projects and teams.</p>"
+    },
+    "projects": {
+        "title": "Projects",
+        "project1-title": "Ana Adelina",
+        "project1-description": "Application for self-management of appointments in a beauty salon.",
+        "project2-title": "MH Movies",
+        "project2-description": "Project created for showcasing movies and viewing their trailers.",
+        "project3-title": "Pork Custom Toys",
+        "project3-description": "Project developed for the promotion and sale of personalized toys.",
+        "project4-title": "CAB Mariano",
+        "project4-description": "Website of Club Atlético Banfield with information on competitions, results, events, history, news, and store.",
+        "project5-title": "API Ecommerce",
+        "project5-description": "This e-commerce API allows you to manage users, products, and orders with complete CRUD functionalities.",
+        "project6-title": "QR Generator",
+        "project6-description": "QR code generator.",
+        "project7-title": "Translator",
+        "project7-description": "Text translator.",
+        "project8-title": "Drag and Drop Notes",
+        "project8-description": "Create your notes, drag them, and drop them wherever you want on the screen.",
+        "view-demo": "View Demo"
+    },
+    "contact": {
+        "title": "Do you have a project?",
+        "subtitle": "Let's work together!",
+        "phone": "Phone: <span>+54 9 11 5133 9874</span>",
+        "name": "Name <input type='text' id='name' name='name' required placeholder='example: John Doe' />",
+        "message": "Message <textarea id='message' name='message' required placeholder='Type your message...' ></textarea>",
+        "submit": "Submit"
+    }
+}
