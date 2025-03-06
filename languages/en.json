@@ -60,7 +60,7 @@
         "subtitle": "Let's work together!",
         "phone": "Phone: <span>+54 9 11 5133 9874</span>",
         "name": "Name <input type='text' id='name' name='name' required placeholder='example: John Doe' />",
-        "email": "Email <input type='email' id='email' name='email' required placeholder='example: example@mail.com' />",
+        "email": "Email <input type='email' id='email' name='email' required placeholder='example@mail.com' />",
         "message": "Message <textarea id='message' name='message' required placeholder='Type your message...' ></textarea>",
         "submit": "Submit"
     }
