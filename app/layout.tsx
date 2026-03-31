@@ -1,16 +1,17 @@
-import type { Metadata } from 'next'
-import './globals.css'
-import Providers from '@/components/Providers'
+import type { Metadata } from "next";
+import "./globals.css";
+import Providers from "@/components/Providers";
 
 export const metadata: Metadata = {
-  title: 'Mariano Hilario - Portfolio',
-  description: 'Fullstack developer and operational leader based in Buenos Aires, Argentina.',
-}
+  title: "Mariano Hilario - Portfolio",
+  description:
+    "Fullstack developer and operational leader based in Buenos Aires, Argentina.",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html suppressHydrationWarning>
@@ -33,5 +34,7 @@ export default function RootLayout({
         </Providers>
       </body>
     </html>
-  )
+  );
 }
+
+export const runtime = "nodejs";
