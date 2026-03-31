@@ -1,0 +1,380 @@
+@import "tailwindcss";
+
+/* Tell Tailwind v4 where to scan for class names */
+@source "../components/**/*.{tsx,ts}";
+@source "../app/**/*.{tsx,ts}";
+
+/* Dark mode via data-theme attribute (next-themes) */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ─── CSS Variables ─────────────────────────────────────────── */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.35);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --accent: #007aff;
+  --accent-hover: #0062cc;
+  --text-primary: #1a1a2e;
+  --text-secondary: #6e6e80;
+  --bg-primary: #f0f4ff;
+  --blob-opacity: 0.35;
+}
+
+[data-theme="dark"] {
+  --glass-bg: rgba(17, 25, 40, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --accent: #0a84ff;
+  --accent-hover: #3a9eff;
+  --text-primary: #f0f0f5;
+  --text-secondary: #a0a0b0;
+  --bg-primary: #0a0e1a;
+  --blob-opacity: 0.2;
+}
+
+/* ─── Base ──────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Mesh background blobs ─────────────────────────────────── */
+.bg-mesh {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: var(--blob-opacity);
+  transition: opacity 0.4s ease;
+}
+
+.bg-blob-1 {
+  width: 700px;
+  height: 700px;
+  background: #3b82f6;
+  top: -250px;
+  left: -200px;
+}
+
+.bg-blob-2 {
+  width: 600px;
+  height: 600px;
+  background: #8b5cf6;
+  top: 35%;
+  right: -200px;
+}
+
+.bg-blob-3 {
+  width: 500px;
+  height: 500px;
+  background: #06b6d4;
+  bottom: -150px;
+  left: 25%;
+}
+
+/* ─── Glass utilities ───────────────────────────────────────── */
+.glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 1.25rem;
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  transition: box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+}
+
+.glass-navbar {
+  background: rgba(255, 255, 255, 0.72);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  -webkit-backdrop-filter: blur(32px);
+  backdrop-filter: blur(32px);
+}
+
+[data-theme="dark"] .glass-navbar {
+  background: rgba(10, 14, 26, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ─── Input glass style ─────────────────────────────────────── */
+.glass-input {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--text-primary);
+  border-radius: 0.75rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.9rem;
+  outline: none;
+  width: 100%;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+[data-theme="dark"] .glass-input {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.glass-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.15);
+}
+
+/* ─── Button styles ─────────────────────────────────────────── */
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.65rem 1.5rem;
+  border-radius: 0.875rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  /* transform: translateY(-2px); */
+  box-shadow: 0 8px 24px rgba(0, 122, 255, 0.35);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent);
+  padding: 0.65rem 1.5rem;
+  border-radius: 0.875rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: 1.5px solid var(--accent);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease,
+    color 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ─── Section layout ────────────────────────────────────────── */
+.section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--glass-border);
+  border-radius: 3px;
+}
+
+/* ─── Hover link utilities ──────────────────────────────────── */
+/* Replace JS onMouseEnter/onMouseLeave with pure CSS */
+/* Nav link hover */
+.nav-link {
+  color: var(--text-secondary);
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+.nav-link:hover {
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.1);
+}
+[data-theme="dark"] .nav-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.hover-accent {
+  color: var(--text-secondary);
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+.hover-accent:hover {
+  color: var(--accent);
+  transform: scale(1.08);
+}
+
+/* ─── Social brand-color hover with glow ───────────────────── */
+.social-link {
+  color: var(--text-secondary);
+  transition:
+    color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+.social-link:hover {
+  transform: scale(1.12);
+}
+.social-github:hover {
+  color: #e6edf3;
+  background: rgba(110, 64, 201, 0.12);
+  box-shadow: 0 0 20px 4px rgba(110, 64, 201, 0.35);
+}
+.social-linkedin:hover {
+  color: #0a66c2;
+  background: rgba(10, 102, 194, 0.12);
+  box-shadow: 0 0 20px 4px rgba(10, 102, 194, 0.4);
+}
+.social-whatsapp:hover {
+  color: #25d366;
+  background: rgba(37, 211, 102, 0.12);
+  box-shadow: 0 0 20px 4px rgba(37, 211, 102, 0.4);
+}
+.social-email:hover {
+  color: #ea4335;
+  background: rgba(234, 67, 53, 0.12);
+  box-shadow: 0 0 20px 4px rgba(234, 67, 53, 0.4);
+}
+
+.skill-tile {
+  border-radius: 0.75rem;
+  padding: 0.625rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: default;
+  transition: background 0.2s ease;
+}
+.skill-tile:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+[data-theme="dark"] .skill-tile:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+.skill-tile img {
+  transition: transform 0.2s ease;
+}
+.skill-tile:hover img {
+  transform: scale(1.15);
+}
+
+.project-img {
+  transition: transform 0.5s ease;
+}
+.project-img-wrapper:hover .project-img {
+  transform: scale(1.08);
+}
+
+/* ─── Tooltip ───────────────────────────────────────────────── */
+.has-tooltip {
+  position: relative;
+}
+.has-tooltip .tooltip-label {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 10;
+}
+.has-tooltip:hover .tooltip-label {
+  opacity: 1;
+}
