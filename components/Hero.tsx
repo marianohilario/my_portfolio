@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations, useLocale } from "@/components/LocaleProvider";
 import { motion } from "framer-motion";
 import Image from "next/image";
 

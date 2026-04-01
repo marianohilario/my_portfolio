@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations } from "@/components/LocaleProvider";
 import { motion } from "framer-motion";
 import HtmlIcon from "../public/assets/skills/Html";
 import CSSIcon from "../public/assets/skills/CSS";

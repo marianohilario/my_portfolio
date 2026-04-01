@@ -1,4 +1,4 @@
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "@/components/LocaleProvider";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 

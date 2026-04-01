@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations } from "@/components/LocaleProvider";
 import { motion } from "framer-motion";
 import { useState, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
