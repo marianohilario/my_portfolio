@@ -308,6 +308,11 @@ body {
   background: rgba(110, 64, 201, 0.12);
   box-shadow: 0 0 20px 4px rgba(110, 64, 201, 0.35);
 }
+.social-gitlab:hover {
+  color: #fc6d26;
+  background: rgba(252, 109, 38, 0.12);
+  box-shadow: 0 0 20px 4px rgba(252, 109, 38, 0.35);
+}
 .social-linkedin:hover {
   color: #0a66c2;
   background: rgba(10, 102, 194, 0.12);

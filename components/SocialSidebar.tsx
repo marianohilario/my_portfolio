@@ -1,11 +1,37 @@
-'use client'
+"use client";
 
 const links = [
-  { href: 'https://github.com/marianohilario', icon: 'ri-github-fill', label: 'GitHub', socialClass: 'social-github' },
-  { href: 'https://www.linkedin.com/in/marianohilario/', icon: 'ri-linkedin-box-fill', label: 'LinkedIn', socialClass: 'social-linkedin' },
-  { href: 'https://wa.me/5491151339874', icon: 'ri-whatsapp-fill', label: 'WhatsApp', socialClass: 'social-whatsapp' },
-  { href: 'mailto:marianohilario@gmail.com', icon: 'ri-mail-fill', label: 'Email', socialClass: 'social-email' },
-]
+  {
+    href: "https://github.com/marianohilario",
+    icon: "ri-github-fill",
+    label: "GitHub",
+    socialClass: "social-github",
+  },
+  {
+    href: "https://gitlab.com/marianoJobchain",
+    icon: "ri-gitlab-fill",
+    label: "GitLab",
+    socialClass: "social-gitlab",
+  },
+  {
+    href: "https://www.linkedin.com/in/marianohilario/",
+    icon: "ri-linkedin-box-fill",
+    label: "LinkedIn",
+    socialClass: "social-linkedin",
+  },
+  {
+    href: "https://wa.me/5491151339874",
+    icon: "ri-whatsapp-fill",
+    label: "WhatsApp",
+    socialClass: "social-whatsapp",
+  },
+  {
+    href: "mailto:marianohilario@gmail.com",
+    icon: "ri-mail-fill",
+    label: "Email",
+    socialClass: "social-email",
+  },
+];
 
 export default function SocialSidebar() {
   return (
@@ -14,7 +40,7 @@ export default function SocialSidebar() {
         <a
           key={label}
           href={href}
-          target={href.startsWith('mailto') ? '_self' : '_blank'}
+          target={href.startsWith("mailto") ? "_self" : "_blank"}
           rel="noopener noreferrer"
           aria-label={label}
           className={`glass-card social-link ${socialClass} w-9 h-9 flex items-center justify-center no-underline`}
@@ -22,7 +48,10 @@ export default function SocialSidebar() {
           <i className={`${icon} text-lg`} />
         </a>
       ))}
-      <div className="w-px h-12" style={{ background: 'var(--glass-border)' }} />
+      <div
+        className="w-px h-12"
+        style={{ background: "var(--glass-border)" }}
+      />
     </aside>
-  )
+  );
 }

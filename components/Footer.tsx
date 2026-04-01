@@ -56,26 +56,34 @@ export default function Footer() {
               href: "https://github.com/marianohilario",
               icon: "ri-github-fill",
               label: "GitHub",
+              socialClass: "social-github",
+            },
+            {
+              href: "https://gitlab.com/marianoJobchain",
+              icon: "ri-gitlab-fill",
+              label: "GitLab",
+              socialClass: "social-gitlab",
             },
             {
               href: "https://www.linkedin.com/in/marianohilario/",
               icon: "ri-linkedin-box-fill",
               label: "LinkedIn",
+              socialClass: "social-linkedin",
             },
             {
               href: "https://wa.me/5491151339874",
               icon: "ri-whatsapp-fill",
               label: "WhatsApp",
+              socialClass: "social-whatsapp",
             },
-          ].map(({ href, icon, label }) => (
+          ].map(({ href, icon, label, socialClass }) => (
             <a
               key={label}
               href={href}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="w-8 h-8 flex items-center justify-center rounded-xl glass-card no-underline transition-all duration-200 hover:scale-110"
-              style={{ color: "var(--text-secondary)" }}
+              className={`w-8 h-8 flex items-center justify-center rounded-xl glass-card no-underline transition-all duration-200 hover:scale-110 ${socialClass}`}
             >
               <i className={`${icon} text-sm`} />
             </a>

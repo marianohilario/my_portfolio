@@ -21,6 +21,12 @@ const socials = [
     socialClass: "social-github",
   },
   {
+    href: "https://gitlab.com/marianoJobchain",
+    icon: "ri-gitlab-fill",
+    label: "GitLab",
+    socialClass: "social-gitlab",
+  },
+  {
     href: "https://www.linkedin.com/in/marianohilario/",
     icon: "ri-linkedin-box-fill",
     label: "LinkedIn",
