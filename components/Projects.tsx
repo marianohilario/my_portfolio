@@ -37,6 +37,36 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: "project4",
+    image: "/assets/projects/MVA.png",
+    alt: "MVA SRL",
+    github: "https://github.com/ArielDRighi/mva-frontend",
+    demo: "https://mvasrl.com/",
+    tech: [
+      { icon: NextIcon, name: "Next.js" },
+      { icon: NestIcon, name: "NestJS" },
+      { icon: TypeOrmIcon, name: "TypeORM" },
+      { icon: PostgresqlIcon, name: "PostgreSQL" },
+      { icon: TypeScriptIcon, name: "TypeScript" },
+      { icon: TailwindIcon, name: "Tailwind CSS" },
+    ],
+  },
+  {
+    id: "project5",
+    image: "/assets/projects/Konektia.png",
+    alt: "Konektia CRM",
+    github: "https://github.com/federicovanni/legalDev",
+    demo: "https://demo.konektiacrm.com",
+    tech: [
+      { icon: NextIcon, name: "Next.js" },
+      { icon: NestIcon, name: "NestJS" },
+      { icon: TypeOrmIcon, name: "TypeORM" },
+      { icon: PostgresqlIcon, name: "PostgreSQL" },
+      { icon: TypeScriptIcon, name: "TypeScript" },
+      { icon: TailwindIcon, name: "Tailwind CSS" },
+    ],
+  },
+  {
     id: "project1",
     image: "/assets/projects/anaadelina.png",
     alt: "Ana Adelina",
@@ -73,29 +103,18 @@ const projects: Project[] = [
       { icon: JavaScriptIcon, name: "JS" },
     ],
   },
-  {
-    id: "project4",
-    image: "/assets/projects/cabmariano.png",
-    alt: "CAB Mariano",
-    github: null,
-    demo: "https://dev-cabmariano.pantheonsite.io/",
-    tech: [
-      { icon: WordpressIcon, name: "WordPress" },
-      { icon: CSSIcon, name: "CSS" },
-    ],
-  },
-  {
-    id: "project5",
-    image: "/assets/projects/nestecommerce.png",
-    alt: "API Ecommerce",
-    github: "https://github.com/marianohilario/backend-nestjs-ecommerce-henry",
-    demo: "https://backend-nestjs-ecommerce-henry.onrender.com/api",
-    tech: [
-      { icon: NestIcon, name: "NestJS" },
-      { icon: PostgresqlIcon, name: "PostgreSQL" },
-      { icon: DockerIcon, name: "Docker" },
-    ],
-  },
+  // {
+  //   id: "project5",
+  //   image: "/assets/projects/nestecommerce.png",
+  //   alt: "API Ecommerce",
+  //   github: "https://github.com/marianohilario/backend-nestjs-ecommerce-henry",
+  //   demo: "https://backend-nestjs-ecommerce-henry.onrender.com/api",
+  //   tech: [
+  //     { icon: NestIcon, name: "NestJS" },
+  //     { icon: PostgresqlIcon, name: "PostgreSQL" },
+  //     { icon: DockerIcon, name: "Docker" },
+  //   ],
+  // },
   {
     id: "project6",
     image: "/assets/projects/qrcodegenerator.png",
@@ -210,7 +229,7 @@ export default function Projects() {
                       {t(titleKey)}
                     </h4>
                     <p
-                      className="text-xs leading-relaxed flex-1 line-clamp-3"
+                      className="text-xs leading-relaxed flex-1 whitespace-pre-line line-clamp-3"
                       style={{ color: "var(--text-secondary)" }}
                     >
                       {t(descKey)}
