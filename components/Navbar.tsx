@@ -3,6 +3,7 @@
 import ThemeToggle from "./ThemeToggle";
 import { clsx } from "clsx";
 import { useNavbar } from "@/hooks/useNavbar";
+import Logo from "../public/logo/Logo";
 
 export default function Navbar() {
   const {
@@ -31,10 +32,7 @@ export default function Navbar() {
             className="flex items-center gap-2 font-bold text-base no-underline shrink-0"
             style={{ color: "var(--text-primary)" }}
           >
-            <i
-              className="ri-code-s-slash-line text-xl"
-              style={{ color: "var(--accent)" }}
-            />
+            <Logo width={30} height={30} className="text-[#94d4eb]" />
             <span className="block">Mariano Hilario</span>
           </a>
 
