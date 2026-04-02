@@ -1,9 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslations } from "@/components/LocaleProvider";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import TiltCard from "./TiltCard";
+import ProjectModal from "./ProjectModal";
+import type { ModalProject } from "./ProjectModal";
 import HtmlIcon from "../public/assets/skills/Html";
 import CSSIcon from "../public/assets/skills/CSS";
 import JavaScriptIcon from "../public/assets/skills/JavaScript";
@@ -13,17 +16,11 @@ import NextIcon from "../public/assets/skills/Next";
 import NodeIcon from "../public/assets/skills/Node";
 import ExpressIcon from "../public/assets/skills/Express";
 import NestIcon from "../public/assets/skills/Nest";
-import PythonIcon from "../public/assets/skills/Python";
-import FastApiIcon from "../public/assets/skills/FastApi";
 import MongoIcon from "../public/assets/skills/Mongo";
 import PostgresqlIcon from "../public/assets/skills/Postgresql";
 import TypeOrmIcon from "../public/assets/skills/TypeOrm";
-import JestIcon from "../public/assets/skills/Jest";
-import DockerIcon from "../public/assets/skills/Docker";
 import WordpressIcon from "../public/assets/skills/Wordpress";
 import TailwindIcon from "../public/assets/skills/Tailwind";
-import GithubIcon from "../public/assets/skills/Github";
-import GitlabIcon from "../public/assets/skills/Gitlab";
 import { JSX } from "react";
 
 interface Project {
@@ -32,7 +29,7 @@ interface Project {
   alt: string;
   github: string | null;
   demo: string;
-  tech: { icon: (props: any) => JSX.Element; name: string }[];
+  tech: { icon: (props: { className?: string }) => JSX.Element; name: string }[];
 }
 
 const projects: Project[] = [
@@ -103,18 +100,6 @@ const projects: Project[] = [
       { icon: JavaScriptIcon, name: "JS" },
     ],
   },
-  // {
-  //   id: "project5",
-  //   image: "/assets/projects/nestecommerce.png",
-  //   alt: "API Ecommerce",
-  //   github: "https://github.com/marianohilario/backend-nestjs-ecommerce-henry",
-  //   demo: "https://backend-nestjs-ecommerce-henry.onrender.com/api",
-  //   tech: [
-  //     { icon: NestIcon, name: "NestJS" },
-  //     { icon: PostgresqlIcon, name: "PostgreSQL" },
-  //     { icon: DockerIcon, name: "Docker" },
-  //   ],
-  // },
   {
     id: "project6",
     image: "/assets/projects/qrcodegenerator.png",
@@ -166,6 +151,23 @@ const stagger = {
 
 export default function Projects() {
   const t = useTranslations("projects");
+  const [selected, setSelected] = useState<ModalProject | null>(null);
+
+  const openModal = (project: Project) => {
+    const titleKey = `${project.id}-title` as Parameters<typeof t>[0];
+    const descKey = `${project.id}-desc` as Parameters<typeof t>[0];
+    setSelected({
+      image: project.image,
+      alt: project.alt,
+      github: project.github,
+      demo: project.demo,
+      title: t(titleKey),
+      description: t(descKey),
+      tech: project.tech,
+      viewCode: t("view-code"),
+      viewDemo: t("view-demo"),
+    });
+  };
 
   return (
     <section id="projects" className="section">
@@ -193,22 +195,22 @@ export default function Projects() {
           return (
             <motion.div key={project.id} variants={fadeUp} className="h-full">
               <TiltCard maxTilt={8} className="h-full">
-                <div className="glass-card overflow-hidden flex flex-col h-full">
+                <div
+                  className="glass-card overflow-hidden flex flex-col h-full cursor-pointer group"
+                  onClick={() => openModal(project)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => e.key === "Enter" && openModal(project)}
+                  aria-label={`Open ${t(titleKey)} details`}
+                >
                   {/* Project image */}
-                  <div className="relative h-40 sm:h-44 overflow-hidden">
+                  <div className="relative h-40 sm:h-44 overflow-hidden shrink-0">
                     <Image
                       src={project.image}
                       alt={project.alt}
                       fill
-                      className="object-cover transition-transform duration-500"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      style={{ transition: "transform 0.5s ease" }}
-                      onMouseEnter={(e) =>
-                        (e.currentTarget.style.transform = "scale(1.08)")
-                      }
-                      onMouseLeave={(e) =>
-                        (e.currentTarget.style.transform = "scale(1)")
-                      }
                     />
                     {/* Gradient overlay */}
                     <div
@@ -218,6 +220,25 @@ export default function Projects() {
                           "linear-gradient(to top, rgba(0,0,0,0.3) 0%, transparent 60%)",
                       }}
                     />
+                    {/* Expand hint — appears on hover */}
+                    <div
+                      className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                      style={{ background: "rgba(0, 122, 255, 0.12)" }}
+                    >
+                      <div
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold"
+                        style={{
+                          background: "rgba(0,0,0,0.5)",
+                          WebkitBackdropFilter: "blur(8px)",
+                          backdropFilter: "blur(8px)",
+                          border: "1px solid rgba(255,255,255,0.25)",
+                          color: "#fff",
+                        }}
+                      >
+                        <i className="ri-zoom-in-line text-sm" />
+                        Ver más
+                      </div>
+                    </div>
                   </div>
 
                   {/* Card body */}
@@ -229,7 +250,7 @@ export default function Projects() {
                       {t(titleKey)}
                     </h4>
                     <p
-                      className="text-xs leading-relaxed flex-1 whitespace-pre-line line-clamp-3"
+                      className="text-xs leading-relaxed flex-1 line-clamp-3"
                       style={{ color: "var(--text-secondary)" }}
                     >
                       {t(descKey)}
@@ -239,13 +260,6 @@ export default function Projects() {
                     <div className="flex flex-wrap gap-1.5">
                       {project.tech.map(({ icon: Icon, name }) => (
                         <div key={name} className="has-tooltip">
-                          {/* <Image
-                            src={src}
-                            alt={name}
-                            width={18}
-                            height={18}
-                            className="w-4 h-4 object-contain opacity-60"
-                          /> */}
                           <Icon className="w-4 h-4 object-contain opacity-60" />
                           <span className="tooltip-label">{name}</span>
                         </div>
@@ -259,15 +273,8 @@ export default function Projects() {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-8 h-8 flex items-center justify-center rounded-lg no-underline transition-all duration-200 hover:scale-110"
-                          style={{ color: "var(--text-secondary)" }}
-                          onMouseEnter={(e) =>
-                            (e.currentTarget.style.color = "var(--accent)")
-                          }
-                          onMouseLeave={(e) =>
-                            (e.currentTarget.style.color =
-                              "var(--text-secondary)")
-                          }
+                          onClick={(e) => e.stopPropagation()}
+                          className="w-8 h-8 flex items-center justify-center rounded-lg no-underline transition-all duration-200 hover:scale-110 hover-accent"
                           aria-label="View code on GitHub"
                         >
                           <i className="ri-github-fill text-lg" />
@@ -279,6 +286,7 @@ export default function Projects() {
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                         className="btn-primary text-xs flex-1"
                         style={{ padding: "0.4rem 0.75rem" }}
                       >
@@ -293,6 +301,8 @@ export default function Projects() {
           );
         })}
       </motion.div>
+
+      <ProjectModal project={selected} onClose={() => setSelected(null)} />
     </section>
   );
 }
