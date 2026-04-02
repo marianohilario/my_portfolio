@@ -10,7 +10,10 @@ export const useNavbar = () => {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
+
+  useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -55,6 +58,6 @@ export const useNavbar = () => {
     switchLocale,
     navLinks,
     resumeFile,
-    theme: resolvedTheme,
+    theme: mounted ? resolvedTheme : undefined,
   };
 };

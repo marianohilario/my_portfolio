@@ -36,7 +36,7 @@ export default function Navbar() {
             <Logo
               width={30}
               height={30}
-              style={{ color: theme === "dark" ? "#94d4eb" : "#132546" }}
+              style={theme ? { color: theme === "dark" ? "#94d4eb" : "#132546" } : undefined}
             />
             <span className="block">Mariano Hilario</span>
           </a>
