@@ -7,8 +7,6 @@ export default function ThemeToggle() {
   const { theme, setTheme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  console.log("theme: ", theme, "systemTheme: ", systemTheme);
-
   const localeStorageTheme =
     typeof window !== "undefined" ? localStorage.getItem("theme") : null;
 
