@@ -15,6 +15,7 @@ export default function Navbar() {
     switchLocale,
     navLinks,
     resumeFile,
+    theme,
   } = useNavbar();
 
   return (
@@ -32,7 +33,11 @@ export default function Navbar() {
             className="flex items-center gap-2 font-bold text-base no-underline shrink-0"
             style={{ color: "var(--text-primary)" }}
           >
-            <Logo width={30} height={30} className="text-[#94d4eb]" />
+            <Logo
+              width={30}
+              height={30}
+              style={{ color: theme === "dark" ? "#94d4eb" : "#132546" }}
+            />
             <span className="block">Mariano Hilario</span>
           </a>
 
