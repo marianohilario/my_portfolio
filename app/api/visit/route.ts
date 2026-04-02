@@ -52,6 +52,7 @@ export async function POST(req: NextRequest) {
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_VISIT_TEMPLATE_ID;
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    const privateKey = process.env.EMAILJS_PRIVATE_KEY;
 
     if (!serviceId || !templateId || !publicKey) {
       return NextResponse.json({ ok: false });
@@ -107,18 +108,19 @@ export async function POST(req: NextRequest) {
     };
 
     // Send via EmailJS REST API (no client-side SDK needed)
-    await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+    const ejsRes = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         service_id: serviceId,
         template_id: templateId,
         user_id: publicKey,
+        ...(privateKey ? { accessToken: privateKey } : {}),
         template_params: params,
       }),
     });
 
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: ejsRes.ok });
   } catch {
     return NextResponse.json({ ok: false });
   }
