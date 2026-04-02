@@ -8,6 +8,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { locales } from "@/lib/i18n";
 import GoHome from "@/components/GoHome";
+import VisitTracker from "@/components/VisitTracker";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -27,6 +28,7 @@ export default function Home() {
       </main>
       <Footer />
       <GoHome />
+      <VisitTracker />
     </>
   );
 }
