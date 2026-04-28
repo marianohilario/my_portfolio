@@ -325,6 +325,11 @@ body {
   background: rgba(37, 211, 102, 0.12);
   box-shadow: 0 0 20px 4px rgba(37, 211, 102, 0.4);
 }
+.social-instagram:hover {
+  color: #e1306c;
+  background: rgba(225, 48, 108, 0.12);
+  box-shadow: 0 0 20px 4px rgba(225, 48, 108, 0.4);
+}
 .social-email:hover {
   color: #ea4335;
   background: rgba(234, 67, 53, 0.12);

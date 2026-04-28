@@ -71,6 +71,12 @@ export default function Footer() {
               socialClass: "social-linkedin",
             },
             {
+              href: "https://www.instagram.com/hilario.dev/",
+              icon: "ri-instagram-fill",
+              label: "Instagram",
+              socialClass: "social-instagram",
+            },
+            {
               href: "https://wa.me/5491151339874",
               icon: "ri-whatsapp-fill",
               label: "WhatsApp",

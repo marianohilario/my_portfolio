@@ -26,6 +26,12 @@ const links = [
     socialClass: "social-whatsapp",
   },
   {
+    href: "https://www.instagram.com/hilario.dev/",
+    icon: "ri-instagram-fill",
+    label: "Instagram",
+    socialClass: "social-instagram",
+  },
+  {
     href: "mailto:marianohilario@gmail.com",
     icon: "ri-mail-fill",
     label: "Email",
