@@ -6,6 +6,29 @@ export const metadata: Metadata = {
   title: "Mariano Hilario - Portfolio",
   description:
     "Fullstack developer and operational leader based in Buenos Aires, Argentina.",
+  openGraph: {
+    title: "Mariano Hilario - Portfolio",
+    description:
+      "Fullstack developer and operational leader based in Buenos Aires, Argentina.",
+    url: "https://marianohilario.com",
+    siteName: "Mariano Hilario",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Mariano Hilario - Portfolio",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mariano Hilario - Portfolio",
+    description:
+      "Fullstack developer and operational leader based in Buenos Aires, Argentina.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
