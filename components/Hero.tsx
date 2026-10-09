@@ -53,7 +53,7 @@ const socials = [
 ];
 
 function calcDevYears() {
-  const start = new Date(2022, 7, 1); // August 2022
+  const start = new Date(2022, 10, 1); // November 2022
   return Math.floor(
     (Date.now() - start.getTime()) / (1000 * 60 * 60 * 24 * 365.25),
   );
@@ -93,7 +93,7 @@ export default function Hero() {
           >
             <div className="w-full h-full rounded-full overflow-hidden">
               <Image
-                src="/assets/profile.png"
+                src="/assets/profile2.png"
                 alt="Mariano Hilario"
                 width={240}
                 height={240}
@@ -114,7 +114,7 @@ export default function Hero() {
             className="text-xs font-bold uppercase tracking-widest"
             style={{ color: "var(--accent)" }}
           >
-            Fullstack Developer · Buenos Aires, Argentina
+            FULL STACK DEVELOPER · OPERATIONS & AI - Buenos Aires, Argentina
           </motion.p>
 
           <motion.h1
@@ -161,13 +161,13 @@ export default function Hero() {
             custom={0.4}
             className="flex flex-wrap gap-3 justify-center md:justify-start"
           >
-            <a href="#contact" className="btn-primary">
-              <i className="ri-handshake-line" />
-              {t("work-with-me")}
-            </a>
             <a href="#projects" className="btn-secondary">
               <i className="ri-eye-line" />
               {t("see-portfolio")}
+            </a>
+            <a href="#contact" className="btn-secondary">
+              <i className="ri-handshake-line" />
+              {t("work-with-me")}
             </a>
             <a href={resumeFile} download className="btn-secondary">
               <i className="ri-download-2-line" />

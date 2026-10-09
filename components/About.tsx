@@ -19,6 +19,11 @@ const stagger = {
 
 const jobs = [
   {
+    titleKey: "fifth-job-title",
+    companyKey: "fifth-job-company",
+    dateKey: "fifth-job-date",
+  },
+  {
     titleKey: "first-job-title",
     companyKey: "first-job-company",
     dateKey: "first-job-date",
@@ -42,6 +47,18 @@ const jobs = [
 
 const certs = [
   {
+    titleKey: "cert6-title",
+    companyKey: "cert6-company",
+    dateKey: "cert6-date",
+    urlKey: "cert6-url",
+  },
+  {
+    titleKey: "cert5-title",
+    companyKey: "cert5-company",
+    dateKey: "cert5-date",
+    urlKey: "cert5-url",
+  },
+  {
     titleKey: "cert1-title",
     companyKey: "cert1-company",
     dateKey: "cert1-date",
@@ -59,12 +76,12 @@ const certs = [
     dateKey: "cert3-date",
     urlKey: "cert3-url",
   },
-  {
-    titleKey: "cert4-title",
-    companyKey: "cert4-company",
-    dateKey: "cert4-date",
-    urlKey: "cert4-url",
-  },
+  // {
+  //   titleKey: "cert4-title",
+  //   companyKey: "cert4-company",
+  //   dateKey: "cert4-date",
+  //   urlKey: "cert4-url",
+  // },
 ] as const;
 
 export default function About() {
@@ -80,7 +97,7 @@ export default function About() {
         className="section-header"
       >
         <h2 className="section-title">{t("subtitle")}</h2>
-        <p className="section-subtitle">{t("text")}</p>
+        <p className="section-subtitle whitespace-pre-line">{t("text")}</p>
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-8">
