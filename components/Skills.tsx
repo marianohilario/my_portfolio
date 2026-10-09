@@ -12,11 +12,15 @@ import NodeIcon from "../public/assets/skills/Node";
 import ExpressIcon from "../public/assets/skills/Express";
 import NestIcon from "../public/assets/skills/Nest";
 import PythonIcon from "../public/assets/skills/Python";
+import LangChainIcon from "../public/assets/skills/LangChain";
+import LangGraphIcon from "../public/assets/skills/LangGraph";
+import ChromaDBIcon from "../public/assets/skills/ChromaDB";
 import FastApiIcon from "../public/assets/skills/FastApi";
 import MongoIcon from "../public/assets/skills/Mongo";
 import PostgresqlIcon from "../public/assets/skills/Postgresql";
 import TypeOrmIcon from "../public/assets/skills/TypeOrm";
 import JestIcon from "../public/assets/skills/Jest";
+import VitestIcon from "../public/assets/skills/Vitest";
 import DockerIcon from "../public/assets/skills/Docker";
 import WordpressIcon from "../public/assets/skills/Wordpress";
 import TailwindIcon from "../public/assets/skills/Tailwind";
@@ -36,10 +40,14 @@ const skills = [
   { icon: NestIcon, name: "NestJS" },
   { icon: PythonIcon, name: "Python" },
   { icon: FastApiIcon, name: "FastAPI" },
+  { icon: LangChainIcon, name: "LangChain" },
+  { icon: LangGraphIcon, name: "LangGraph" },
   { icon: MongoIcon, name: "MongoDB" },
   { icon: PostgresqlIcon, name: "PostgreSQL" },
+  { icon: ChromaDBIcon, name: "ChromaDB" },
   { icon: TypeOrmIcon, name: "TypeORM" },
   { icon: JestIcon, name: "Jest" },
+  { icon: VitestIcon, name: "Vitest" },
   { icon: DockerIcon, name: "Docker" },
   { icon: WordpressIcon, name: "WordPress" },
   { icon: GithubIcon, name: "Github" },
