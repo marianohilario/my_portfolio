@@ -9,6 +9,10 @@ import ProjectModal from "./ProjectModal";
 import type { ModalProject } from "./ProjectModal";
 import HtmlIcon from "../public/assets/skills/Html";
 import CSSIcon from "../public/assets/skills/CSS";
+import PythonIcon from "../public/assets/skills/Python";
+import LangChainIcon from "../public/assets/skills/LangChain";
+import LangGraphIcon from "../public/assets/skills/LangGraph";
+import ChromaDBIcon from "../public/assets/skills/ChromaDB";
 import JavaScriptIcon from "../public/assets/skills/JavaScript";
 import TypeScriptIcon from "../public/assets/skills/TypeScript";
 import ReactIcon from "../public/assets/skills/React";
@@ -29,7 +33,10 @@ interface Project {
   alt: string;
   github: string | null;
   demo: string;
-  tech: { icon: (props: { className?: string }) => JSX.Element; name: string }[];
+  tech: {
+    icon: (props: { className?: string }) => JSX.Element;
+    name: string;
+  }[];
 }
 
 const projects: Project[] = [
@@ -89,6 +96,44 @@ const projects: Project[] = [
     ],
   },
   {
+    id: "project6",
+    image: "/assets/projects/logistic-agent.png",
+    alt: "Logistic Agent",
+    github: "https://github.com/marianohilario/Logistic-Agent",
+    demo: "https://www.linkedin.com/feed/update/urn:li:activity:7514299449180078080/",
+    tech: [
+      { icon: PythonIcon, name: "Python" },
+      { icon: ChromaDBIcon, name: "ChromaDB" },
+      { icon: LangChainIcon, name: "LangChain" },
+      { icon: LangGraphIcon, name: "LangGraph" },
+    ],
+  },
+  {
+    id: "project7",
+    image: "/assets/projects/que-cookies.png",
+    alt: "Que Cookies",
+    github: "https://github.com/marianohilario/queCookies",
+    demo: "https://www.quecookies.com.ar/",
+    tech: [
+      { icon: NextIcon, name: "Next.js" },
+      { icon: TypeScriptIcon, name: "TypeScript" },
+      { icon: JavaScriptIcon, name: "JS" },
+      { icon: TailwindIcon, name: "Tailwind CSS" },
+    ],
+  },
+  {
+    id: "project8",
+    image: "/assets/projects/match-chile.png",
+    alt: "Match Inmobiliario Chile",
+    github: "https://github.com/marianohilario/match-inmobiliario",
+    demo: "https://www.matchinmobiliariochile.cl/",
+    tech: [
+      { icon: NextIcon, name: "Next.js" },
+      { icon: TypeScriptIcon, name: "TypeScript" },
+      { icon: TailwindIcon, name: "Tailwind CSS" },
+    ],
+  },
+  {
     id: "project3",
     image: "/assets/projects/pork.png",
     alt: "Pork Custom Toys",
@@ -97,40 +142,6 @@ const projects: Project[] = [
     tech: [
       { icon: HtmlIcon, name: "HTML5" },
       { icon: CSSIcon, name: "CSS" },
-      { icon: JavaScriptIcon, name: "JS" },
-    ],
-  },
-  {
-    id: "project6",
-    image: "/assets/projects/qrcodegenerator.png",
-    alt: "QR Generator",
-    github: "https://github.com/marianohilario/QR-Code-Generator",
-    demo: "https://qr-code-generator-drab-six.vercel.app/",
-    tech: [
-      { icon: HtmlIcon, name: "HTML5" },
-      { icon: CSSIcon, name: "CSS" },
-      { icon: JavaScriptIcon, name: "JS" },
-    ],
-  },
-  {
-    id: "project7",
-    image: "/assets/projects/translator.png",
-    alt: "Translator",
-    github: "https://github.com/marianohilario/translator-app",
-    demo: "https://translator-app-bay.vercel.app/",
-    tech: [
-      { icon: HtmlIcon, name: "HTML5" },
-      { icon: JavaScriptIcon, name: "JS" },
-    ],
-  },
-  {
-    id: "project8",
-    image: "/assets/projects/draganddropnotes.png",
-    alt: "Drag and Drop Notes",
-    github: "https://github.com/marianohilario/drag-and-drop-notes",
-    demo: "https://drag-and-drop-notes-henna.vercel.app/",
-    tech: [
-      { icon: HtmlIcon, name: "HTML5" },
       { icon: JavaScriptIcon, name: "JS" },
     ],
   },
